@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="APack.One" />
+			<class name="APack.Two" />
+			<class name="APack.Three" />
+			<class name="BPack.Four" />
+			<class name="BPack.Five" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="4" name="TestTwo_End-to-End">
+		<classes>
+			<class name="CPack.Six" />
+			<class name="CPack.Seven" />
+<!-- 	<class name="TutorialNinja.EndToEndCode" />	 -->   	
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
+ 

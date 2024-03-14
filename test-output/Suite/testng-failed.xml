@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TestTwo_End-to-End(failed)">
+    <classes>
+      <class name="TutorialNinja.EndToEndCode">
+        <methods>
+          <include name="TestOne"/>
+        </methods>
+      </class> <!-- TutorialNinja.EndToEndCode -->
+    </classes>
+  </test> <!-- TestTwo_End-to-End(failed) -->
+</suite> <!-- Failed suite [Suite] -->
