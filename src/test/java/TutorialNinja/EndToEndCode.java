@@ -24,6 +24,7 @@ public class EndToEndCode {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);		
 	
+	//	driver.quit();//-----------------------------------------------------------------------Remove it to Run
 
 		//Click MyAccount
 		driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/a/span[1]")).click();
@@ -32,7 +33,7 @@ public class EndToEndCode {
 		//Registration page
 		driver.findElement(By.name("firstname")).sendKeys("Ashok");
 		driver.findElement(By.name("lastname")).sendKeys("Sahoo");
-		driver.findElement(By.name("email")).sendKeys("ashoksahoo49@gmail.com");
+		driver.findElement(By.name("email")).sendKeys("ashoksahoo52@gmail.com");
 		driver.findElement(By.name("telephone")).sendKeys("9835698521");
 		driver.findElement(By.name("password")).sendKeys("123456");
 		driver.findElement(By.name("confirm")).sendKeys("123456");

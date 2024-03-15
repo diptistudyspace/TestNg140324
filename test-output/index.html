@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TutorialNinja.EndToEndCode" class="method navigator-link" hash-for-method="TestOne">TestOne</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,37 +117,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="BPack.Five" class="method navigator-link" hash-for-method="testFive">testFive</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="BPack.Four" class="method navigator-link" hash-for-method="testFour">testFour</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="APack.One" class="method navigator-link" hash-for-method="testOne">testOne</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="CPack.Seven" class="method navigator-link" hash-for-method="testSeven">testSeven</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="CPack.Six" class="method navigator-link" hash-for-method="testSix">testSix</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="APack.Three" class="method navigator-link" hash-for-method="testThree">testThree</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="APack.Two" class="method navigator-link" hash-for-method="testTwo">testTwo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -148,21 +132,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">CPack.Six</span>
+              <img src="failed.png"/>
+              <span class="class-name">TutorialNinja.EndToEndCode</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testSix">
-                  </a> <!-- testSix -->
-                  <span class="method-name">testSix</span>
+                  <a name="TestOne">
+                  </a> <!-- TestOne -->
+                  <span class="method-name">TestOne</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Your Account Has Been Created!] but found [Register Account]
+	at TutorialNinja.EndToEndCode.TestOne(EndToEndCode.java:50)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -174,81 +163,6 @@
                   <a name="testSeven">
                   </a> <!-- testSeven -->
                   <span class="method-name">testSeven</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">APack.Two</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testTwo">
-                  </a> <!-- testTwo -->
-                  <span class="method-name">testTwo</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">APack.One</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testOne">
-                  </a> <!-- testOne -->
-                  <span class="method-name">testOne</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">BPack.Five</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testFive">
-                  </a> <!-- testFive -->
-                  <span class="method-name">testFive</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">APack.Three</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testThree">
-                  </a> <!-- testThree -->
-                  <span class="method-name">testThree</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">BPack.Four</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testFour">
-                  </a> <!-- testFour -->
-                  <span class="method-name">testFour</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -265,19 +179,22 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;APack.One&quot;/&gt;
-      &lt;class name=&quot;APack.Two&quot;/&gt;
-      &lt;class name=&quot;APack.Three&quot;/&gt;
-      &lt;class name=&quot;BPack.Four&quot;/&gt;
-      &lt;class name=&quot;BPack.Five&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
-  &lt;test thread-count=&quot;4&quot; name=&quot;TestTwo_End-to-End&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;CPack.Six&quot;/&gt;
+      &lt;class name=&quot;TutorialNinja.EndToEndCode&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;APack.One&quot;/&gt;
+          &lt;exclude name=&quot;APack.Two&quot;/&gt;
+          &lt;exclude name=&quot;CPack.Six&quot;/&gt;
+          &lt;exclude name=&quot;CPack.Eight&quot;/&gt;
+          &lt;exclude name=&quot;BPack.Five&quot;/&gt;
+          &lt;exclude name=&quot;CPack.Nine&quot;/&gt;
+          &lt;exclude name=&quot;BPack.Four&quot;/&gt;
+          &lt;exclude name=&quot;APack.Three&quot;/&gt;
+          &lt;exclude name=&quot;CPack.Parameter&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- TutorialNinja.EndToEndCode --&gt;
       &lt;class name=&quot;CPack.Seven&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TestTwo_End-to-End --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -289,10 +206,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (5 classes)</span>
-              </li>
-              <li>
-                <span class="test-name">TestTwo_End-to-End (2 classes)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -318,40 +232,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testOne')
-data.setCell(0, 2, 'APack.One')
-data.setCell(0, 3, 3);
+data.setCell(0, 1, 'TestOne')
+data.setCell(0, 2, 'TutorialNinja.EndToEndCode')
+data.setCell(0, 3, 7922);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testFour')
-data.setCell(1, 2, 'BPack.Four')
+data.setCell(1, 1, 'testSeven')
+data.setCell(1, 2, 'CPack.Seven')
 data.setCell(1, 3, 2);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testFive')
-data.setCell(2, 2, 'BPack.Five')
-data.setCell(2, 3, 2);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testSix')
-data.setCell(3, 2, 'CPack.Six')
-data.setCell(3, 3, 2);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testThree')
-data.setCell(4, 2, 'APack.Three')
-data.setCell(4, 3, 1);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testTwo')
-data.setCell(5, 2, 'APack.Two')
-data.setCell(5, 3, 1);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testSeven')
-data.setCell(6, 2, 'CPack.Seven')
-data.setCell(6, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 ms</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -377,78 +271,27 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">APack.One</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">BeforeTestDemoClass</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">testOne</span>
-                <span class="method-start">27 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">APack.Two</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testTwo</span>
-                <span class="method-start">35 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">APack.Three</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testThree</span>
-                <span class="method-start">38 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">BPack.Four</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testFour</span>
-                <span class="method-start">41 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">BPack.Five</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testFive</span>
-                <span class="method-start">44 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">APack.Two</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">AfterTestDemoClass1</span>
-                <span class="method-start">48 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">CPack.Seven</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">BeforeTestDemoClass2</span>
-                <span class="method-start">118 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">CPack.Six</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TutorialNinja.EndToEndCode</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testSix</span>
-                <span class="method-start">120 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TestOne</span>
+                <span class="method-start">28 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">CPack.Seven</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testSeven</span>
-                <span class="method-start">124 ms</span>
+                <span class="method-start">7962 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">CPack.Six</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">AfterTestDemoClass2</span>
-                <span class="method-start">126 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<parameter name="StudentName" value="Dipti Ranjan Nayak"></parameter>
+		<parameter name="SchoolName" value="DAV Cuttack"></parameter>
+		<parameter name="RollNO" value="82"></parameter>
+		<parameter name="Class" value="10"></parameter>
+		<classes>
+			<class name="CPack.Parameter" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
+<!-- Parameter Demo -->

@@ -4,9 +4,8 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="TutorialNinja.EndToEndCode">
-
 				<methods>
-
+					<include name="CPack.Parameter" />
 					<exclude name="APack.One" />
 					<exclude name="APack.Two" />
 					<exclude name="CPack.Six" />
@@ -15,13 +14,11 @@
 					<exclude name="CPack.Nine" />
 					<exclude name="BPack.Four" />
 					<exclude name="APack.Three" />
-
-					<exclude name="CPack.Parameter" />
+					<exclude name="CPack.Seven" />
 				</methods>
 			</class>
-			<class name="CPack.Seven" />
-
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
+
 
