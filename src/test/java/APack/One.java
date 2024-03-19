@@ -14,4 +14,9 @@ public class One {
 	public void testOne() {
 		System.out.println("Test One Got Executed");
 	}
+	
+	@Test
+	public void testOneSub() {
+		System.out.println("Sub class is executed");
+	}
 }

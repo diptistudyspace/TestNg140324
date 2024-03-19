@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test thread-count="5" name="Test">
-		<classes>
-			<class name="TutorialNinja.EndToEndCode">
-
-				<methods>
-
-					<exclude name="APack.One" />
-					<exclude name="APack.Two" />
-					<exclude name="CPack.Six" />
-					<exclude name="CPack.Eight" />
-					<exclude name="BPack.Five" />
-					<exclude name="CPack.Nine" />
-					<exclude name="BPack.Four" />
-					<exclude name="APack.Three" />
-
-					<exclude name="CPack.Parameter" />
-				</methods>
-			</class>
-			<class name="CPack.Seven" />
-
-		</classes>
-	</test> <!-- Test -->
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="BPack.Four"/>
+      <class name="APack.Three"/>
+      <class name="CPack.Seven"/>
+      
+      <class name="APack.One"/>
+      <class name="APack.Two"/>
+      <class name="CPack.Six"/>
+      <class name="CPack.Eight"/>
+      <class name="BPack.Five"/>
+      <class name="CPack.Nine"/>
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->
-
